@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIRIT TWEAKS - Guide Complet PS4/PS5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .header .description {
+            font-size: 16px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .subsection {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .subsection-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+        }
+        
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            padding-left: 34px;
+        }
+        
+        .value-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px dashed #667eea;
+            margin-top: 10px;
+            margin-left: 34px;
+        }
+        
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .value-item:last-child {
+            border-bottom: none;
+        }
+        
+        .value-label {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        
+        .value-data {
+            font-family: 'Courier New', monospace;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .alert-danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .result-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .result-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .result-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 900;
+        }
+        
+        .print-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            transition: transform 0.2s;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .print-button {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 SPIRIT TWEAKS</h1>
+            <div class="subtitle">Guide Complet PS4/PS5</div>
+            <div class="description">
+                Optimisation ULTIME pour 0ms de latency, aim god et performance maximale
+            </div>
+            <div class="badge">✨ EDITION ULTIMATE 2025</div>
+        </div>
+        
+        <div class="content">
+            <div class="alert alert-success">
+                <div class="alert-title">🎯 OBJECTIF DE CE GUIDE</div>
+                Passer de 150ms de latency totale à 30-40ms = -110ms = AIM GOD MODE 👑
+            </div>
+
+            <!-- SECTION 1: RÉSEAU -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <div class="section-title">📡 Configuration Réseau Console</div>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Connexion Filaire (OBLIGATOIRE)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Allume ta PS4/PS5
+                        </div>
+                        <div class="step-description">
+                            Assure-toi que ta console est allumée et sur l'écran d'accueil
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Ouvre les Paramètres
+                        </div>
+                        <div class="step-description">
+                            Appuie sur le bouton <strong>OPTIONS</strong> de ta manette → Sélectionne l'icône <strong>⚙️ Paramètres</strong> (en haut à droite)
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">3</div>
+                            Menu Réseau
+                        </div>
+                        <div class="step-description">
+                            Descends avec le stick gauche et sélectionne <strong>📡 Réseau</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">4</div>
+                            Configurer la connexion
+                        </div>
+                        <div class="step-description">
+                            Sélectionne <strong>"Configurer la connexion Internet"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">5</div>
+                            Type de Connexion
+                        </div>
+                        <div class="step-description">
+                            Sélectionne <strong>"Utiliser un câble réseau (LAN)"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">6</div>
+                            Mode Configuration
+                        </div>
+                        <div class="step-description">
+                            Sélectionne <strong>"Personnalisée"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="alert">
+                        <div class="alert-title">⚠️ IMPORTANT</div>
+                        Branche le câble Ethernet MAINTENANT si pas déjà fait : Routeur → PS4/PS5
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Configuration IP Manuelle</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Paramètres IP
+                        </div>
+                        <div class="step-description">
+                            Tu vois "Paramètres IP" → Sélectionne <strong>"Manuel"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Adresse IP
+                        </div>
+                        <div class="step-description">
+                            Clique sur le champ "Adresse IP" → Entre avec le clavier : <strong>192.168.1.XXX</strong>
+                            <br>Remplace XXX par un nombre entre 10 et 254 (ex: 50)
+                            <br><strong>📝 NOTE CE NOMBRE SUR UN PAPIER !</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Exemple</span>
+                                <span class="value-data">192.168.1.50</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">3</div>
+                            Masque de sous-réseau
+                        </div>
+                        <div class="step-description">
+                            Descends au champ suivant → Entre : <strong>255.255.255.0</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Masque</span>
+                                <span class="value-data">255.255.255.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">4</div>
+                            Passerelle par défaut
+                        </div>
+                        <div class="step-description">
+                            Descends au champ suivant → Entre : <strong>192.168.1.1</strong> (ou 192.168.0.1 selon ton routeur)
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Passerelle</span>
+                                <span class="value-data">192.168.1.1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">5</div>
+                            Validation
+                        </div>
+                        <div class="step-description">
+                            Appuie sur <strong>"Suivant"</strong> en bas à droite
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: DNS Ultra-Rapide (Cloudflare)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Paramètres DNS
+                        </div>
+                        <div class="step-description">
+                            Tu vois "Paramètres DNS" → Sélectionne <strong>"Manuel"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            DNS Primaire
+                        </div>
+                        <div class="step-description">
+                            Clique sur "DNS Primaire" → Entre : <strong>1.1.1.1</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">DNS Primaire</span>
+                                <span class="value-data">1.1.1.1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">3</div>
+                            DNS Secondaire
+                        </div>
+                        <div class="step-description">
+                            Descends au champ suivant → Entre : <strong>1.0.0.1</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">DNS Secondaire</span>
+                                <span class="value-data">1.0.0.1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">4</div>
+                            Validation
+                        </div>
+                        <div class="step-description">
+                            Appuie sur <strong>"Suivant"</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 4: MTU Optimal</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Paramètres MTU
+                        </div>
+                        <div class="step-description">
+                            Tu vois "Paramètres MTU" → Sélectionne <strong>"Manuel"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Valeur MTU
+                        </div>
+                        <div class="step-description">
+                            Efface la valeur existante → Entre : <strong>1500</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">MTU</span>
+                                <span class="value-data">1500</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">3</div>
+                            Validation
+                        </div>
+                        <div class="step-description">
+                            Appuie sur <strong>"Suivant"</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 5: Serveur Proxy</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Configuration Proxy
+                        </div>
+                        <div class="step-description">
+                            Tu vois "Serveur proxy" → Sélectionne <strong>"Ne pas utiliser"</strong> → Appuie sur <strong>X</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Finalisation
+                        </div>
+                        <div class="step-description">
+                            La console va tester la connexion automatiquement
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 6: Test de Connexion</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Attends le test
+                        </div>
+                        <div class="step-description">
+                            La console va tester : Obtenir l'adresse IP → Se connecter à Internet → PSN
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Vérifie le Type NAT
+                        </div>
+                        <div class="step-description">
+                            Regarde la ligne <strong>"Type NAT"</strong> en bas
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <div class="alert-title">✅ OBJECTIF</div>
+                        Type NAT doit être : <strong>Type 1</strong> (idéal) ou <strong>Type 2</strong> (bon)
+                    </div>
+                    
+                    <div class="alert alert-danger">
+                        <div class="alert-title">❌ SI TYPE NAT 3</div>
+                        Passe à la section "Configuration Routeur" pour ouvrir les ports
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: ROUTEUR -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <div class="section-title">🌐 Configuration Routeur</div>
+                </div>
+
+                <div class="alert alert-info">
+                    <div class="alert-title">📌 ACCÈS ROUTEUR</div>
+                    Ouvre un navigateur et tape : <strong>192.168.1.1</strong> (ou 192.168.0.1)<br>
+                    Login : admin / Password : admin (ou voir sous le routeur)
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Port Forwarding PS4/PS5</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Navigation Routeur
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Port Forwarding</strong> ou <strong>Applications & Gaming</strong> ou <strong>NAT Forwarding</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Créer Nouvelle Règle
+                        </div>
+                        <div class="step-description">
+                            Clique sur <strong>Ajouter</strong> ou <strong>Créer une règle</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Nom de la règle</span>
+                                <span class="value-data">PS4/PS5</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">IP Locale</span>
+                                <span class="value-data">192.168.1.XXX</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Ports TCP</span>
+                                <span class="value-data">80, 443, 3478-3480</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Ports UDP</span>
+                                <span class="value-data">3478-3479, 49152-65535</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Port Forwarding Fortnite</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Créer Règle Fortnite
+                        </div>
+                        <div class="step-description">
+                            Ajoute une nouvelle règle spécifique pour Fortnite
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Nom de la règle</span>
+                                <span class="value-data">Fortnite</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">IP Locale</span>
+                                <span class="value-data">192.168.1.XXX</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Ports TCP</span>
+                                <span class="value-data">5222, 5795-5847</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Ports UDP</span>
+                                <span class="value-data">5222, 5795-5847</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: UPnP</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Activer UPnP
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres Avancés → UPnP</strong> et <strong>Active</strong>-le
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 4: QoS (Quality of Service) - CRUCIAL</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Activer QoS
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>QoS</strong> ou <strong>Traffic Control</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Configuration QoS
+                        </div>
+                        <div class="step-description">
+                            Configure la priorité pour ta PS4/PS5
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Priorité</span>
+                                <span class="value-data">Highest / Maximum</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Type</span>
+                                <span class="value-data">Par Adresse IP</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">IP</span>
+                                <span class="value-data">192.168.1.XXX</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Catégorie</span>
+                                <span class="value-data">Gaming / High Priority</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: MANETTE -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <div class="section-title">🎮 Configuration Manette</div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Connexion USB (OBLIGATOIRE)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Branchement USB
+                        </div>
+                        <div class="step-description">
+                            Branche ta manette en <strong>USB directement à la console</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Paramètres Console
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Périphériques → Manettes</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">3</div>
+                            Activer Communication USB
+                        </div>
+                        <div class="step-description">
+                            Active <strong>Communication par câble USB</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <div class="alert-title">⚡ RÉSULTAT</div>
+                        Latency manette : -50ms (Bluetooth) → -5ms (USB) = <strong>-45ms gagné !</strong>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Dead Zone (Dans Fortnite)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Paramètres Fortnite
+                        </div>
+                        <div class="step-description">
+                            Lance Fortnite → <strong>Paramètres → Manette</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Dead Zone Stick Gauche</span>
+                                <span class="value-data">0.05</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Dead Zone Stick Droit</span>
+                                <span class="value-data">0.05</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Look Dampening</span>
+                                <span class="value-data">0.00</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Look Ease In Time</span>
+                                <span class="value-data">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert">
+                        <div class="alert-title">⚠️ ATTENTION</div>
+                        Si ta manette drift (bouge toute seule), augmente légèrement les Dead Zones (0.10-0.15)
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: Sensibilité AIM (Dans Fortnite)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Navigation Fortnite
+                        </div>
+                        <div class="step-description">
+                            Lance Fortnite → <strong>Paramètres → Manette → Sensibilité</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Configuration Sensibilité
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Sensibilité X</span>
+                                <span class="value-data">40-45%</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Sensibilité Y</span>
+                                <span class="value-data">40-45%</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">ADS Sensitivity</span>
+                                <span class="value-data">45-50%</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Scope Sensitivity</span>
+                                <span class="value-data">40-45%</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Build/Edit Sens</span>
+                                <span class="value-data">2.0x - 2.5x</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <div class="alert-title">💡 CONSEIL</div>
+                        Commence avec ces valeurs et ajuste selon ton confort. L'important est la CONSISTANCE !
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: TV/MONITEUR -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <div class="section-title">📺 Configuration TV/Moniteur</div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Mode Jeu (OBLIGATOIRE)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Activer Game Mode
+                        </div>
+                        <div class="step-description">
+                            Va dans les paramètres TV et active le <strong>Mode Jeu</strong> ou <strong>PC Mode</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <div class="alert-title">⚡ IMPACT</div>
+                        Input Lag TV : -60ms → -10ms = <strong>-50ms gagné !</strong>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Désactiver Traitements d'Image</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Désactive TOUT
+                        </div>
+                        <div class="step-description">
+                            Dans les paramètres d'image, désactive :
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Motion Smoothing</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Noise Reduction</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Edge Enhancement</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Dynamic Contrast</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">HDR+ / Super Resolution</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: Câble HDMI</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Utilise HDMI 2.0+
+                        </div>
+                        <div class="step-description">
+                            Assure-toi d'utiliser un <strong>câble HDMI 2.0</strong> minimum (fourni avec PS4/PS5)
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Branche sur HDMI ARC/eARC
+                        </div>
+                        <div class="step-description">
+                            Privilégie le port <strong>HDMI 1</strong> ou le port marqué <strong>ARC/eARC</strong> (souvent le plus rapide)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: CONSOLE PS4/PS5 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <div class="section-title">⚙️ Paramètres Console PS4/PS5</div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Mode Performance (PS5 uniquement)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Navigation PS5
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Enregistrer et Diffuser → Diffusion</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Qualité Vidéo
+                        </div>
+                        <div class="step-description">
+                            Sélectionne <strong>Mode Performance</strong> ou <strong>120 FPS</strong> si disponible
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Désactiver HDR (Recommandé pour compétitif)</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Paramètres Vidéo
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Son et Écran → Paramètres de sortie vidéo</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">2</div>
+                            Désactive HDR
+                        </div>
+                        <div class="step-description">
+                            Mets <strong>HDR</strong> sur <strong>OFF</strong> (le HDR ajoute ~10ms de latence)
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <div class="alert-title">💡 POURQUOI ?</div>
+                        Le HDR c'est joli, mais ça ajoute du délai. En compétitif, privilégie la performance !
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: Résolution de Sortie</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Configuration
+                        </div>
+                        <div class="step-description">
+                            Dans <strong>Paramètres de sortie vidéo → Résolution</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">PS4</span>
+                                <span class="value-data">1080p</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">PS5 (120Hz)</span>
+                                <span class="value-data">1080p @ 120Hz</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">PS5 (60Hz)</span>
+                                <span class="value-data">1080p @ 60Hz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 4: Capture et Partage</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Désactive l'Enregistrement Auto
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Captures et Diffusions → Captures</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Enregistrement Auto</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Durée Clips Vidéo</span>
+                                <span class="value-data">30 secondes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 5: Notifications</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Mode Ne Pas Déranger
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Notifications → Ne Pas Déranger</strong> et <strong>Active</strong> pendant les parties ranked
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: FORTNITE -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <div class="section-title">🎯 Paramètres Fortnite Optimaux</div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 1: Paramètres Graphiques</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Configuration Graphique
+                        </div>
+                        <div class="step-description">
+                            Lance Fortnite → <strong>Paramètres → Vidéo</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Mode Fenêtre</span>
+                                <span class="value-data">Plein Écran</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Limite FPS</span>
+                                <span class="value-data">60 FPS (PS4) / 120 FPS (PS5)</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Qualité 3D</span>
+                                <span class="value-data">100%</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Mode Performance</span>
+                                <span class="value-data">ON (PS5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 2: Paramètres Visuels Avancés</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Désactive les Effets
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Flou de Mouvement</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">V-Sync</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Affichage FPS</span>
+                                <span class="value-data">ON</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Statistiques Réseau</span>
+                                <span class="value-data">ON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 3: Région Matchmaking</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Sélectionne ta Région
+                        </div>
+                        <div class="step-description">
+                            Va dans <strong>Paramètres → Jeu → Région de Matchmaking</strong>
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Pour la France</span>
+                                <span class="value-data">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert">
+                        <div class="alert-title">⚠️ IMPORTANT</div>
+                        Ne change JAMAIS de région. Reste toujours sur EUROPE pour avoir le meilleur ping !
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Étape 4: Options de Combat</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">1</div>
+                            Configuration Combat
+                        </div>
+                        <div class="value-box">
+                            <div class="value-item">
+                                <span class="value-label">Assistance Visée</span>
+                                <span class="value-data">ON (100%)</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Edit sur Relâchement</span>
+                                <span class="value-data">ON</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Confirmation Edit</span>
+                                <span class="value-data">OFF</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-label">Réinitialisation Build</span>
+                                <span class="value-data">ON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 7: VÉRIFICATION -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">7</div>
+                    <div class="section-title">✅ Checklist Finale</div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-title">Vérifie que TOUT est OK</div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            Réseau
+                        </div>
+                        <div class="step-description">
+                            ✅ Câble Ethernet branché<br>
+                            ✅ IP Statique configurée (192.168.1.XXX)<br>
+                            ✅ DNS Cloudflare (1.1.1.1 / 1.0.0.1)<br>
+                            ✅ MTU à 1500<br>
+                            ✅ Type NAT 1 ou 2
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            Routeur
+                        </div>
+                        <div class="step-description">
+                            ✅ Ports PS4/PS5 ouverts<br>
+                            ✅ Ports Fortnite ouverts<br>
+                            ✅ UPnP activé<br>
+                            ✅ QoS configuré (Priorité Maximum)<br>
+                            ✅ DNS Cloudflare sur routeur
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            Manette
+                        </div>
+                        <div class="step-description">
+                            ✅ Câble USB branché<br>
+                            ✅ Communication USB activée<br>
+                            ✅ Dead Zones à 0.05<br>
+                            ✅ Sensibilité configurée
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            TV/Moniteur
+                        </div>
+                        <div class="step-description">
+                            ✅ Mode Jeu activé<br>
+                            ✅ Traitements d'image désactivés<br>
+                            ✅ Câble HDMI 2.0+<br>
+                            ✅ Port HDMI ARC/eARC utilisé
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            Console
+                        </div>
+                        <div class="step-description">
+                            ✅ HDR désactivé<br>
+                            ✅ Résolution 1080p<br>
+                            ✅ Enregistrement auto désactivé<br>
+                            ✅ Mode Performance (PS5)
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-title">
+                            <div class="step-icon">✓</div>
+                            Fortnite
+                        </div>
+                        <div class="step-description">
+                            ✅ FPS Max (60 ou 120)<br>
+                            ✅ V-Sync OFF<br>
+                            ✅ Flou de mouvement OFF<br>
+                            ✅ Région Europe<br>
+                            ✅ Stats réseau activées
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RÉSULTATS -->
+            <div class="result-box">
+                <div class="result-title">🎊 FÉLICITATIONS !</div>
+                <p style="font-size: 18px; margin-bottom: 20px;">
+                    Tu as complété toute la configuration SPIRIT TWEAKS !
+                </p>
+                <div class="result-stats">
+                    <div class="stat">
+                        <div class="stat-label">Latence Réseau</div>
+                        <div class="stat-value">-20ms</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Latence Manette</div>
+                        <div class="stat-value">-45ms</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Input Lag TV</div>
+                        <div class="stat-value">-50ms</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">TOTAL GAGNÉ</div>
+                        <div class="stat-value">-115ms</div>
+                    </div>
+                </div>
+                <p style="font-size: 16px; margin-top: 20px; opacity: 0.9;">
+                    Tu es maintenant un <strong>AIM GOD</strong> ! 👑<br>
+                    Lance Fortnite et domine la competition !
+                </p>
+            </div>
+
+            <button class="print-button" onclick="window.print()">
+                🖨️ Imprimer en PDF
+            </button>
+        </div>
+
+        <div class="footer">
+            <p><strong>SPIRIT TWEAKS</strong> - Guide Ultime 2025</p>
+            <p>Pour toute question, vérifie chaque étape une par une</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                💡 Astuce : Redémarre ta console après avoir tout configuré !
+            </p>
+        </div>
+    </div>
+</body>
+</html>
